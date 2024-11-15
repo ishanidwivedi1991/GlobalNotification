@@ -15,7 +15,7 @@ namespace GlobalNotificationSystem.Application.Services.v1
 
         public async Task<Response> PostValidateNotificationByNumberAsync(Request request)
         {
-            Response notitification = new Response() { IsMaxLimitReached = false, MessageCount = request.content.Count()};
+            Response notitification = new Response() { IsMaxLimitReached = false, MessageCount = request.Content.Count()};
             var responseString = await _httpClient.GetStringAsync(uri);
             var providerLimitResponse = JsonConvert.DeserializeObject<ProviderResponse>(responseString);
 
@@ -35,7 +35,7 @@ namespace GlobalNotificationSystem.Application.Services.v1
 
         public async Task<Response> PostValidateNotificationByAccountAsync(Request request)
         {
-            Response notitification = new Response() { IsMaxLimitReached = false, MessageCount = request.content.Count() };
+            Response notitification = new Response() { IsMaxLimitReached = false, MessageCount = request.Content.Count() };
 
             var responseString = await _httpClient.GetStringAsync(uri);
             var providerLimitResponse = JsonConvert.DeserializeObject<ProviderResponse>(responseString);

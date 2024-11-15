@@ -17,7 +17,9 @@ namespace GlobalNotificationSystem.API.Default
                 options.AddDefaultPolicy(
                     policy =>
                     {
-                        policy.WithOrigins("http://localhost:5183/");
+                        policy.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
                     });
             });
 

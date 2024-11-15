@@ -30,7 +30,7 @@ namespace GlobalNotificationSystem.API.Default.Endpoints
 
         internal static Response PostValidateNotification(INotificationConfigService service, [FromBody] Request notification)
         {
-            Response result = new Response() { IsMaxLimitReached = false, MessageCount = notification.content.Count() };
+            Response result = new Response() { IsMaxLimitReached = false, MessageCount = notification.Content.Count() };
 
             var responseByNumber = PostValidateNotificationByNumber(service, notification);
             var responseByAccount = PostValidateNotificationByAccount(service, notification);
