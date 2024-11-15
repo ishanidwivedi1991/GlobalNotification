@@ -1,0 +1,153 @@
+﻿@GlobalNotificationSystem.API.Default_HostAddress = https://localhost:7155
+
+POST {{GlobalNotificationSystem.API.Default_HostAddress}}/v1/notification/validate/
+Content-Type: application/json
+Accept:  application/json
+
+{
+  "content": [
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+{
+      "body": "mu",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "2",
+        "accountName": "string"
+      }
+    }
+  ],
+  "sender": {
+    "phoneNumber": "1234567890",
+    "name": "string"
+  }
+}
+###
+
+
+POST {{GlobalNotificationSystem.API.Default_HostAddress}}/v1/notification/contact/
+Content-Type: application/json
+Accept:  application/json
+
+{
+  "content": [
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+{
+      "body": "mu",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "2",
+        "accountName": "string"
+      }
+    }
+  ],
+  "sender": {
+    "phoneNumber": "1234567890",
+    "name": "string"
+  }
+}
+###
+
+POST {{GlobalNotificationSystem.API.Default_HostAddress}}/v1/notification/account/
+Content-Type: application/json
+Accept:  application/json
+
+{
+  "content": [
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },{
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+    {
+      "body": "hello",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "1",
+        "accountName": "string"
+      }
+    },
+{
+      "body": "mu",
+      "receiver": {
+        "phoneNumber": "string",
+        "name": "string"
+      },
+      "account": {
+        "accountId": "2",
+        "accountName": "string"
+      }
+    }
+  ],
+  "sender": {
+    "phoneNumber": "1234567890",
+    "name": "string"
+  }
+}
+###

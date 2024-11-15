@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Validate Notification";
+}
+
+
+@{
+    if (HttpMethods.IsPost(Request.Method))
+    {
+        string data = Request.Form["payload"];
+
+        <text>
+            You entered: <br />
+            Payload Name: @data <br />
+        </text>
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Checker Form</title>
+</head>
+<body>
+    <form action="javascript:void(0);" method="post" onsubmit="validateItem()">
+        <fieldset>
+            <legend>Notification</legend>
+            <div>
+                <label for="Payload">Json Load:</label>
+                <input type="text" id="payload" name="Payload" value="" />
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="js/site.js" asp-append-version="true"></script>   
+
+</body>
+</html>
+
+
